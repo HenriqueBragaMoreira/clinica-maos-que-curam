@@ -4,7 +4,7 @@ export default function Document() {
   return (
     <Html lang="en">
       <Head />
-      <body className='pl-36 pr-44 pt-3'>
+      <body>
         <Main />
         <NextScript />
       </body>
