@@ -6,20 +6,28 @@ export default function Home() {
   return (
     <div>
       <div className="mx-5 xl:mx-20">
-        <header className="md:min-h-screen">
+        <header className="min-h-screen mb-14 lg:mb-0">
           <div className="flex justify-around items-center">
-            <div className="flex flex-col text-center">
+            <div className="flex flex-col text-center items-center">
+            
               <h1 className="text-6xl 2xl:text-8xl md:text-6xl xl:text-7xl font-cursive mt-8 lg:mt-0">
                 Quiropraxia Mãos Que Curam
               </h1>
+              <Image
+              src={logo}
+              alt="Picture of the author"
+              width={150}
+              height={60}
+              className=" mt-6 lg:mt-0 visible md:invisible md:hidden"
+            />
               <div className="mt-12">
-                <p className="text-xl mb-7">
+                <p className="text-xl font-semibold mb-7">
                   Não espere mais para dar o primeiro passo em direção a uma
                   vida
                   <br />
                   mais saudável e sem dor.
                 </p>
-                <p className="text-xl">
+                <p className="text-xl font-semibold">
                   Marque sua consulta conosco hoje mesmo e descubra como a<br />
                   quiropraxia pode melhorar a sua qualidade de vida.
                 </p>
@@ -44,18 +52,18 @@ export default function Home() {
           </a>
         </header>
 
-        <main className="md:min-h-screen mb-8 lg:mb-0">
+        <main className="md:min-h-screen mb-14 lg:mb-0">
           <div className="text-center">
-            <h1 className="text-4xl 2xl:text-8xl md:text-6xl xl:text-7xl mb-12">
+            <h1 className="text-5xl font-semibold 2xl:text-8xl md:text-6xl xl:text-7xl mb-12">
               Quem Somos
             </h1>
-            <p className="mb-10">
+            <p className="mb-10 font-semibold text-xl">
               Bem-vindo à nossa clínica, onde a saúde e o equilíbrio se
               encontram! Se você está em busca de alívio <br /> da dor,
               melhorias na postura ou deseja viver uma vida mais saudável e
               feliz, você está no lugar certo.
             </p>
-            <p className="mb-20">
+            <p className="mb-20 font-semibold text-xl">
               Estamos aqui para ajudar você a se sentir melhor, viver melhor e
               alcançar o seu máximo potencial de saúde. Junte-se a nós nesta{" "}
               <br /> jornada para um bem-estar completo. Aguardamos ansiosamente
@@ -71,10 +79,10 @@ export default function Home() {
         </main>
 
         <div className="md:min-h-screen text-center mb-8 lg:mb-0">
-          <h1 className="text-4xl 2xl:text-8xl md:text-6xl xl:text-7xl mb-12">
+          <h1 className="text-5xl font-semibold 2xl:text-8xl md:text-6xl xl:text-7xl mb-12">
             Nossos Tratamentos
           </h1>
-          <p className="mb-16">
+          <p className="mb-16 font-semibold text-xl">
             Entendemos que cada paciente é único, com necessidades e metas
             individuais. Nosso compromisso é fornecer um atendimento <br />{" "}
             personalizado e compassivo, adaptado às suas necessidades
@@ -98,12 +106,12 @@ export default function Home() {
         </div>
 
         <div className="md:min-h-screen">
-          <h1 className="text-4xl 2xl:text-8xl md:text-6xl xl:text-7xl mb-12 text-center">
+          <h1 className="text-5xl font-semibold 2xl:text-8xl md:text-6xl xl:text-7xl mb-12 text-center">
             Onde Ficamos Localizados
           </h1>
           <div>
-            <div className="mt-20 bg-purple-300 w-96 mr-6 h-96 rounded-3xl">
-              <p className="font-bold text-xl text-center pt-4">Contato</p>
+            <div className="mt-20 bg-purple-300 w-96 mr-6 h-96 rounded-3xl ml-0 lg:ml-16 mb-8 lg:mb-0">
+              <p className="font-bold text-2xl text-center pt-4">Contato</p>
             </div>
           </div>
         </div>
