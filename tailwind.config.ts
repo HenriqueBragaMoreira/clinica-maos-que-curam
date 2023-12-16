@@ -16,6 +16,13 @@ const config: Config = {
       fontFamily: {
         cursive: ['Pacifico']
       },
+      width: {
+        '600': '600px',
+        '450': '450px'
+      },
+      height: {
+        '450': '450px'
+      }
     },
   },
   plugins: [],
