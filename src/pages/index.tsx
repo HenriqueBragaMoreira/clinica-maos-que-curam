@@ -140,28 +140,28 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="md:min-h-screen">
+        <div className="md:min-h-screen text-center mb-8 lg:mb-0">
           <h1 className="text-5xl font-semibold 2xl:text-8xl md:text-6xl xl:text-7xl mb-12 text-center">
             Onde Ficamos Localizados
           </h1>
-          <div className="flex sm:flex-row md:flex-col xl:flex-row justify-around h-[500px]">
-            <div className="mt-20 bg-purple-300 w-96 mr-6 h-96 rounded-3xl ml-0 lg:ml-16 mb-8 lg:mb-0">
+          <div className="lg:flex lg:flex-row justify-around h-[500px]">
+            <div className="mt-20 bg-purple-300 w-auto h-96 rounded-3xl ">
               <p className="font-bold text-2xl text-center pt-4">Contato</p>
-              <div className="flex flex-col gap-8 mt-12 ml-8">
+              <div className="flex flex-col gap-8 mt-12 ml-8 mr-8">
                 <div className="flex items-center gap-4">
-                  <BsWhatsapp className=" text-4xl" />
+                  <BsWhatsapp className="text-4xl" />
                   <p className="text-lg font-bold">(11) 91421-5301</p>
                 </div>
                 <div className="flex items-center gap-4">
-                  <BsInstagram className=" text-4xl" />
+                  <BsInstagram className="text-4xl" />
                   <p className="text-lg font-bold">@quiropraxiamaosquecuram</p>
                 </div>
                 <div className="flex items-center gap-4">
-                  <BsTiktok className=" text-4xl" />
+                  <BsTiktok className="text-4xl" />
                   <p className="text-lg font-bold">@quiro.maosquecuram</p>
                 </div>
                 <div className="flex items-center gap-4">
-                  <MdOutlineMail className=" text-4xl" />
+                  <MdOutlineMail className="text-4xl" />
                   <p className="text-lg font-bold"></p>
                 </div>
               </div>
@@ -176,11 +176,12 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <footer className="p-1.5 bg-black w-full text-white text-center">
+      <footer className="p-1.5 mt-[490px] md:mt-auto sm:mt-[490px] lg:mt-auto bg-black w-full text-white text-center">
         Desenvolved by{" "}
         <a
           href="https://github.com/HenriqueBragaMoreira"
           className="font-bold underline underline-offset-1"
+          target="_blank"
         >
           braga
         </a>
