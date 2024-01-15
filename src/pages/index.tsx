@@ -4,6 +4,12 @@ import mid from "../../public/mid.jpg";
 import left from "../../public/left.jpg";
 import right from "../../public/right.jpg";
 import { BsInstagram, BsTiktok, BsWhatsapp } from "react-icons/bs";
+import { Metadata } from 'next'
+
+const metadata: Metadata = {
+  title: "Quiropraxia Mãos que Curam",
+  description: 'Descubra o poder transformador da quiropraxia na "Quiropraxia Maos que Curam". Nossos especialistas dedicam-se a proporcionar cuidados quiropráticos excepcionais, aliviando dores e promovendo o equilíbrio do corpo. Sinta a diferença em sua saúde geral ao explorar nossa landing page. Agende hoje mesmo sua consulta e inicie sua jornada para uma vida sem dores e plenamente saudável. Conheça a excelência em quiropraxia - Quiropraxia Maos que Curam, onde o bem-estar é a prioridade.'
+}
 
 export default function Home() {
   return (
