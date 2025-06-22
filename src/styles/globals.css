@@ -1,1 +1,29 @@
+@import url("https://fonts.googleapis.com/css2?family=Fustat:wght@200..800&display=swap");
 @import "tailwindcss";
+
+:root {
+  --font-fustat: "Fustat", sans-serif;
+  --background: oklch(0.9645 0.006 43.34);
+
+  --primary: oklch(0.2686 0 0);
+  --secondary: oklch(0.5555 0 0);
+  --tertiary: oklch(0.5557 0.0836 45.1);
+  --fourth: oklch(0.464 0 0);
+}
+
+@theme inline {
+  --font-fustat: var(--font-fustat);
+
+  --color-background: var(--background);
+
+  --color-primary: var(--primary);
+  --color-secondary: var(--secondary);
+  --color-tertiary: var(--tertiary);
+  --color-fourth: var(--fourth);
+}
+
+@layer base {
+  body {
+    @apply bg-background text-primary font-fustat;
+  }
+}
