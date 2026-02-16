@@ -1,29 +1,39 @@
-@import url("https://fonts.googleapis.com/css2?family=Fustat:wght@200..800&display=swap");
 @import "tailwindcss";
 
 :root {
   --font-fustat: "Fustat", sans-serif;
-  --background: oklch(0.9645 0.006 43.34);
+  --font-satoshi: "Satoshi", "Satoshi Placeholder", sans-serif;
+  --font-inter: "Inter", "Inter Placeholder", sans-serif;
 
-  --primary: oklch(0.2686 0 0);
-  --secondary: oklch(0.5555 0 0);
-  --tertiary: oklch(0.5557 0.0836 45.1);
-  --fourth: oklch(0.464 0 0);
+  --background: #F7F2F0;
+
+  --primary: #262626;
+  --secondary: #737373;
+  --title-topic: #9C6349;
+  --description-topic: #595959;
+
+  --button-primary:#9C6349;
+  --button-secondary:#FFFFFF;
 }
 
 @theme inline {
-  --font-fustat: var(--font-fustat);
-
   --color-background: var(--background);
 
   --color-primary: var(--primary);
   --color-secondary: var(--secondary);
-  --color-tertiary: var(--tertiary);
-  --color-fourth: var(--fourth);
+  --color-title-topic: var(--title-topic);
+  --color-description-topic: var(--description-topic);
+
+  --color-button-primary: var(--button-primary);
+  --color-button-secondary: var(--button-secondary);
+
+  --font-sans: var(--font-fustat);
+  --font-mono: var(--font-fustat);
+  --font-satoshi: var(--font-satoshi);
+  --font-inter: var(--font-inter);
 }
 
-@layer base {
-  body {
-    @apply bg-background text-primary font-fustat;
-  }
+body {
+  background: var(--background);
+  font-family: var(--font-fustat), sans-serif;
 }
