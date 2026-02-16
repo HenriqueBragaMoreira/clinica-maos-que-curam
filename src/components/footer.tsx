@@ -1,5 +1,6 @@
-import { Facebook, Instagram, Mail, MapPin, Phone } from 'lucide-react';
-import { TiktokIcon } from './icons/tiktok';
+import { Facebook, Instagram, Mail, MapPin, Phone } from "lucide-react";
+import Link from "next/link";
+import { TiktokIcon } from "./icons/tiktok";
 
 export function Footer() {
   return (
@@ -18,14 +19,14 @@ export function Footer() {
           <div className="flex flex-col gap-6">
             <p className="text-xl font-medium">Navegação</p>
 
-            <div className="flex flex-col gap-5 text-secondary font-medium">
-              <a href="#services">Serviços</a>
+            <div className="flex flex-col gap-5 *:text-secondary *:font-medium *:hover:text-black *:duration-150 *:transition">
+              <Link href="#services">Serviços</Link>
 
-              <a href="#about-us">Sobre nós</a>
+              <Link href="#about-us">Sobre nós</Link>
 
-              <a href="#prices">Preços</a>
+              <Link href="#prices">Preços</Link>
 
-              <a href="#testimonial">Depoimentos</a>
+              <Link href="#testimonial">Depoimentos</Link>
             </div>
           </div>
 
@@ -77,27 +78,33 @@ export function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 title="Link para o instagram da clínica Quiropraxia Mãos que Curam"
-                className="p-1 border border-secondary/20 rounded-md"
+                className="group p-1 border border-secondary/20 rounded-md size-6 flex items-center justify-center"
               >
-                <Instagram size={14} />
+                <Instagram
+                  size={12}
+                  className="group-hover:scale-110 transition"
+                />
               </a>
               <a
                 href="https://www.facebook.com/profile.php?id=61556296266060"
                 target="_blank"
                 rel="noopener noreferrer"
                 title="Link para o facebook da clínica Quiropraxia Mãos que Curam"
-                className="p-1 border border-secondary/20 rounded-md"
+                className="group p-1 border border-secondary/20 rounded-md size-6 flex items-center justify-center"
               >
-                <Facebook size={14} />
+                <Facebook
+                  size={12}
+                  className="group-hover:scale-110 transition"
+                />
               </a>
               <a
                 href="https://www.tiktok.com/@quiro.maosquecuram"
                 target="_blank"
                 rel="noopener noreferrer"
                 title="Link para o tiktok da clínica Quiropraxia Mãos que Curam"
-                className="p-1 border border-secondary/20 rounded-md"
+                className="group p-1 border border-secondary/20 rounded-md size-6 flex items-center justify-center"
               >
-                <TiktokIcon className="size-3.5" />
+                <TiktokIcon className="size-3 group-hover:scale-110 transition" />
               </a>
             </div>
           </div>
