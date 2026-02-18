@@ -24,9 +24,9 @@ export function Footer() {
 
               <Link href="#about-us">Sobre nós</Link>
 
-              <Link href="#prices">Preços</Link>
+              <Link href="#pricing">Preços</Link>
 
-              <Link href="#testimonial">Depoimentos</Link>
+              <Link href="#testimonials">Depoimentos</Link>
             </div>
           </div>
 

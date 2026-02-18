@@ -11,11 +11,11 @@ export function Navbar() {
           </Link>
         </div>
 
-        <div className="flex items-center gap-6 *:font-medium *:font-satoshi *:hover:text-primary/70 *:duration-150 *:transition">
+        <div className="flex items-center gap-6 *:text-primary *:tracking-[-0.40px] *:leading-[25.6px] *:font-medium *:font-satoshi *:hover:text-primary/70 *:duration-150 *:transition">
           <Link href="#services">Serviços</Link>
           <Link href="#about-us">Sobre nós</Link>
           <Link href="#pricing">Preços</Link>
-          <Link href="#testimonial">Depoimentos</Link>
+          <Link href="#testimonials">Depoimentos</Link>
         </div>
 
         <div>
