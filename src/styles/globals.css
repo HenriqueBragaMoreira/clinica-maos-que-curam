@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@import "tw-animate-css";
 
 :root {
   --font-fustat: "Fustat", sans-serif;
@@ -17,6 +18,24 @@
   --button-secondary:#FFFFFF;
 }
 
+@keyframes accordion-down {
+  from {
+    height: 0;
+  }
+  to {
+    height: var(--radix-accordion-content-height);
+  }
+}
+
+@keyframes accordion-up {
+  from {
+    height: var(--radix-accordion-content-height);
+  }
+  to {
+    height: 0;
+  }
+}
+
 @theme inline {
   --color-background: var(--background);
 
@@ -33,6 +52,9 @@
   --font-satoshi: var(--font-satoshi);
   --font-inter: var(--font-inter);
   --font-playwrite: var(--font-playwrite);
+
+  --animate-accordion-down: accordion-down 0.2s ease-out;
+  --animate-accordion-up: accordion-up 0.2s ease-out;
 }
 
 body {
