@@ -12,7 +12,7 @@ export function ServicesSection() {
           <div className="flex items-center justify-center gap-2.5">
             <div className="rounded-full bg-title-topic size-2.5" />
 
-            <h2 className="text-lg font-medium text-black tracking-[-0.54px]">
+            <h2 className="text-lg font-medium font-satoshi text-black tracking-[-0.54px]">
               Services
             </h2>
           </div>
