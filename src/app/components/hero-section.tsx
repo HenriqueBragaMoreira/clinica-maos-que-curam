@@ -6,11 +6,14 @@ import Link from "next/link";
 
 export function HeroSection() {
   return (
-    <section id="hero" className="flex justify-center items-center pt-[148px]">
+    <section
+      id="hero"
+      className="flex justify-center items-center pt-[148px] pb-14"
+    >
       <div className="flex flex-col items-center flex-1 gap-[72px] max-w-[1150px]">
         <div className="space-y-7 max-w-[600px]">
           <div className="flex items-start justify-center gap-4">
-            <div className="flex items-center justify-center gap-0.5">
+            <div className="flex items-center justify-center gap-1">
               {Array.from({ length: 5 }).map((_, index) => (
                 <Star
                   size={17}
@@ -52,7 +55,47 @@ export function HeroSection() {
 
         <div className="w-full h-[725px] bg-title-topic rounded-3xl" />
 
-        <div></div>
+        <div className="flex items-center justify-around w-full">
+          <div className="flex flex-col gap-1.5 *:font-medium text-center">
+            <span className="text-title-topic text-5xl tracking-[-1.61px]">
+              100+
+            </span>
+
+            <span className="text-description-topic text-lg tracking-[-0.54px]">
+              Treatments offered
+            </span>
+          </div>
+
+          <div className="flex flex-col gap-1.5 *:font-medium text-center">
+            <span className="text-title-topic text-5xl tracking-[-1.61px]">
+              50+
+            </span>
+
+            <span className="text-description-topic text-lg tracking-[-0.54px]">
+              Certified therapists
+            </span>
+          </div>
+
+          <div className="flex flex-col gap-1.5 *:font-medium text-center">
+            <span className="text-title-topic text-5xl tracking-[-1.61px]">
+              2000+
+            </span>
+
+            <span className="text-description-topic text-lg tracking-[-0.54px]">
+              Satisfied clients
+            </span>
+          </div>
+
+          <div className="flex flex-col gap-1.5 *:font-medium text-center">
+            <span className="text-title-topic text-5xl tracking-[-1.61px]">
+              300+
+            </span>
+
+            <span className="text-description-topic text-lg tracking-[-0.54px]">
+              Unique wellness
+            </span>
+          </div>
+        </div>
       </div>
     </section>
   );
