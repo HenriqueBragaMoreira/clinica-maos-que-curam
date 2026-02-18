@@ -19,7 +19,7 @@ export function Footer() {
           <div className="flex flex-col gap-6">
             <p className="text-xl font-medium">Navegação</p>
 
-            <div className="flex flex-col gap-5 *:text-secondary *:font-medium *:hover:text-black *:duration-150 *:transition">
+            <div className="flex flex-col gap-5 *:text-secondary *:font-medium *:hover:text-black *:duration-200 *:transition">
               <Link href="#services">Serviços</Link>
 
               <Link href="#about-us">Sobre nós</Link>
@@ -33,8 +33,8 @@ export function Footer() {
           <div className="flex flex-col gap-6">
             <p className="text-xl font-medium">Contato</p>
 
-            <div className="flex flex-col gap-5 text-secondary font-medium">
-              <a href="tel:+55(11)91421-5301" className="flex gap-2.5">
+            <div className="flex flex-col gap-5 text-secondary *:font-medium *:hover:text-black *:duration-200 *:transition">
+              <Link href="tel:+55(11)91421-5301" className="flex gap-2.5">
                 <Phone
                   className="text-white"
                   fill="#9c6349"
@@ -43,15 +43,18 @@ export function Footer() {
                 />
 
                 <span>+55 (11) 91421-5301</span>
-              </a>
+              </Link>
 
-              <a href="mailto:test@gmail.com" className="flex gap-2.5">
-                <Mail className="text-tertiary" size={20} />
+              <Link href="mailto:test@gmail.com" className="flex gap-2.5">
+                <Mail
+                  className="text-title-topic hover:text-title-topic"
+                  size={20}
+                />
 
                 <span>test@gmail.com</span>
-              </a>
+              </Link>
 
-              <a
+              <Link
                 href="https://www.google.com/maps/place/Quiropraxia+M%C3%A3os+que+Curam/data=!4m2!3m1!1s0x0:0x72acd74cad4440d1?sa=X&ved=1t:2428&ictx=111"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -65,7 +68,7 @@ export function Footer() {
                 />
 
                 <span>São Paulo, SP</span>
-              </a>
+              </Link>
             </div>
           </div>
 
