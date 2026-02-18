@@ -12,7 +12,7 @@ export function Navbar() {
         <div className="flex items-center gap-6 *:font-medium *:font-satoshi *:hover:text-primary/70 *:duration-150 *:transition">
           <Link href="#services">Serviços</Link>
           <Link href="#about-us">Sobre nós</Link>
-          <Link href="#prices">Preços</Link>
+          <Link href="#pricing">Preços</Link>
           <Link href="#testimonial">Depoimentos</Link>
         </div>
 
