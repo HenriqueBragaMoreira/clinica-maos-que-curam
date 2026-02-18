@@ -1,6 +1,7 @@
 import { Footer } from "@/components/footer";
 import { Navbar } from "@/components/navbar";
 import "@/styles/globals.css";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import type { Metadata } from "next";
 import { Fustat } from "next/font/google";
 
@@ -27,6 +28,10 @@ export default function RootLayout({
     <html lang="pt-BR" className="scroll-smooth">
       <head>
         <link
+          href="https://fonts.googleapis.com/css2?family=Playwrite+AT:ital,wght@0,100..400;1,100..400&display=swap"
+          rel="stylesheet"
+        />
+        <link
           href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700,900&display=swap"
           rel="stylesheet"
         />
@@ -34,6 +39,7 @@ export default function RootLayout({
       <body className={`${fustat.variable} antialiased`}>
         <Navbar />
         {children}
+        <SpeedInsights />
         <Footer />
       </body>
     </html>

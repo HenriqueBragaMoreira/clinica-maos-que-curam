@@ -4,6 +4,7 @@
   --font-fustat: "Fustat", sans-serif;
   --font-satoshi: "Satoshi", "Satoshi Placeholder", sans-serif;
   --font-inter: "Inter", "Inter Placeholder", sans-serif;
+  --font-playwrite: "Playwrite AT", "Playwrite AT Placeholder", sans-serif;
 
   --background: #F7F2F0;
 
@@ -31,6 +32,7 @@
   --font-mono: var(--font-fustat);
   --font-satoshi: var(--font-satoshi);
   --font-inter: var(--font-inter);
+  --font-playwrite: var(--font-playwrite);
 }
 
 body {
