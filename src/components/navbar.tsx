@@ -1,12 +1,31 @@
+"use client";
+
+import { useMotionValueEvent, useScroll } from "motion/react";
 import Link from "next/link";
+import { useState } from "react";
+import { cn } from "@/lib/cn";
 import { Button } from "./button";
 
 export function Navbar() {
+  const { scrollY } = useScroll();
+  const [scrolled, setScrolled] = useState(false);
+
+  useMotionValueEvent(scrollY, "change", (latest) => {
+    setScrolled(latest > 24);
+  });
+
   return (
-    <header className="flex justify-center fixed top-0 left-0 right-0 z-50 bg-background py-5 w-full">
+    <header
+      className={cn(
+        "flex justify-center fixed top-0 left-0 right-0 z-50 w-full backdrop-blur-md animate-slide-down transition-[padding,background-color] duration-300",
+        scrolled
+          ? "py-3 bg-background/70 shadow-[0_1px_24px_-16px_rgba(0,0,0,0.6)]"
+          : "py-5 bg-background",
+      )}
+    >
       <div className="flex items-center justify-between flex-1 max-w-[1150px]">
         <div>
-          <Link className="font-semibold font-playwrite" href="/">
+          <Link className="font-semibold font-playwrite" href="/#hero">
             Quiropraxia Mãos que Curam
           </Link>
         </div>

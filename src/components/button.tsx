@@ -1,5 +1,5 @@
-import { cn } from "@/lib/cn";
 import { ArrowRight } from "lucide-react";
+import { cn } from "@/lib/cn";
 
 export function Button({
   children,
