@@ -10,13 +10,34 @@ const fustat = Fustat({
   subsets: ["latin"],
 });
 
+const description =
+  "Quiropraxia Mãos que Curam: tratamentos quiropráticos para aliviar dores, melhorar a postura e restaurar o equilíbrio do corpo. Agende sua avaliação.";
+
 export const metadata: Metadata = {
   title: "Quiropraxia Mãos que Curam",
-  description:
-    "Descubra o poder transformador da quiropraxia na Quiropraxia Maos que Curam. Nossos especialistas dedicam-se a proporcionar cuidados quiropráticos excepcionais, aliviando dores e promovendo o equilíbrio do corpo. Sinta a diferença em sua saúde geral ao explorar nossa landing page. Agende hoje mesmo sua consulta e inicie sua jornada para uma vida sem dores e plenamente saudável. Conheça a excelência em quiropraxia - Quiropraxia Maos que Curam, onde o bem-estar é a prioridade.",
+  description,
   keywords: [
-    "quiropraxia, coluna, dores nas costas, saúde, bem-estar, mãos que curam, alívio",
+    "quiropraxia",
+    "coluna",
+    "dores nas costas",
+    "saúde",
+    "bem-estar",
+    "mãos que curam",
+    "alívio de dores",
+    "postura",
   ],
+  openGraph: {
+    type: "website",
+    locale: "pt_BR",
+    siteName: "Quiropraxia Mãos que Curam",
+    title: "Quiropraxia Mãos que Curam",
+    description,
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Quiropraxia Mãos que Curam",
+    description,
+  },
 };
 
 export default function RootLayout({
