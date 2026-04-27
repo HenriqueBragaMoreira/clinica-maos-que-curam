@@ -1,6 +1,6 @@
-import type { ComponentPropsWithRef } from 'react';
+import type { ComponentPropsWithRef } from "react";
 
-export function TiktokIcon(props: ComponentPropsWithRef<'svg'>) {
+export function TiktokIcon(props: ComponentPropsWithRef<"svg">) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -10,6 +10,7 @@ export function TiktokIcon(props: ComponentPropsWithRef<'svg'>) {
       fillRule="evenodd"
       clipRule="evenodd"
       viewBox="0 0 449.45 515.38"
+      aria-hidden="true"
       {...props}
     >
       <path
