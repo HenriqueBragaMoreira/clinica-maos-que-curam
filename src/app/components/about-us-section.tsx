@@ -1,7 +1,26 @@
-/** biome-ignore-all lint/suspicious/noArrayIndexKey: <> */
-
+import {
+  BadgeCheck,
+  CheckIcon,
+  Flower,
+  Gem,
+  HeartHandshake,
+  Leaf,
+  Pipette,
+  User,
+} from "lucide-react";
 import { Button } from "@/components/button";
-import { CheckIcon, Flower, Gem, Pipette, User } from "lucide-react";
+import { Reveal } from "@/components/motion/reveal";
+import { Stagger, StaggerItem } from "@/components/motion/stagger";
+
+const checklist = [
+  "Profissionais habilitados e registrados",
+  "Avaliação individual para cada paciente",
+  "Tratamentos sem remédios ou cirurgia",
+  "+10 mil pacientes atendidos",
+];
+
+const featureIconClassName =
+  "text-title-topic transition-transform duration-300 group-hover:-rotate-6 group-hover:scale-110";
 
 export function AboutUsSection() {
   return (
@@ -10,171 +29,208 @@ export function AboutUsSection() {
       className="flex justify-center items-center py-[82px]"
     >
       <div className="flex flex-col items-center flex-1 gap-[78px] max-w-[1150px]">
-        <div className="flex flex-col items-center gap-8">
+        <Reveal className="flex flex-col items-center gap-8">
           <Flower className="text-title-topic" size={58} />
 
           <p className="text-primary text-center text-2xl font-medium tracking-[-0.60px] leading-[38px] max-w-[675px]">
-            Our deep tissue and therapeutic massages are designed to ease muscle
-            tension, improve circulation, boost lymphatic flow, and restore a
-            natural sense of calm and balance to your body
+            Nossas manipulações e tratamentos quiropráticos visam liberar tensão
+            muscular, melhorar a circulação, estimular o sistema nervoso e
+            restaurar o equilíbrio natural do seu corpo
           </p>
-        </div>
+        </Reveal>
 
         <div className="flex items-center justify-center gap-12">
-          <div className="min-h-[445px] min-w-[550px] rounded-3xl bg-title-topic" />
+          <Reveal
+            x={-40}
+            y={0}
+            className="min-h-[445px] min-w-[550px] rounded-3xl bg-title-topic"
+          />
 
-          <div className="flex flex-col gap-5">
+          <Reveal x={40} y={0} className="flex flex-col gap-5">
             <div className="flex items-center gap-2.5">
               <div className="rounded-full bg-title-topic size-2.5" />
 
               <h2 className="text-lg font-medium font-satoshi text-black tracking-[-0.54px]">
-                About Us
+                Sobre Nós
               </h2>
             </div>
 
             <p className="text-5xl text-primary font-medium tracking-[-1.61px] leading-[54.5px]">
-              Discover our spa’s commitment to wellness
+              Conheça nosso compromisso com a sua saúde
             </p>
 
             <span className="text-secondary font-medium font-satoshi text-lg tracking-[-0.54px] max-w-[500px]">
-              Under the guidance of our experienced team, we offer revitalizing
-              spa treatments designed to enhance your natural beauty. With a
-              focus on non-invasive therapies, our spa attracts clients from
-              around the world seeking rejuvenation and relaxation
+              Com uma equipe experiente, oferecemos tratamentos quiropráticos
+              que valorizam seu bem-estar natural. Com foco em terapias não
+              invasivas, atendemos pacientes que buscam alívio e qualidade de
+              vida de verdade
             </span>
 
-            <Button className="mt-3.5 max-w-fit">Schedule now</Button>
-          </div>
+            <Button className="mt-3.5 max-w-fit">Agendar agora</Button>
+          </Reveal>
         </div>
 
-        <div className="flex justify-center gap-6 w-full px-4">
-          <div className="flex flex-col flex-1 items-center gap-8">
-            <Pipette className="text-title-topic" size={54} strokeWidth={1.5} />
+        <Stagger className="flex justify-center gap-6 w-full px-4">
+          <StaggerItem className="group flex flex-col flex-1 items-center gap-8">
+            <Pipette
+              className={featureIconClassName}
+              size={54}
+              strokeWidth={1.5}
+            />
 
             <div className="flex flex-col items-center gap-3 *:font-satoshi *:font-medium *:text-center">
               <h3 className="text-primary text-[22px] tracking-[-0.66px] leading-[26.4px]">
-                Customized Treatments
+                Tratamentos Personalizados
               </h3>
               <p className="text-lg text-secondary tracking-[-0.54px]">
-                Every guest enjoys a tailored experience, carefully designed to
-                address
+                Cada paciente recebe um atendimento individual, desenvolvido
+                para tratar sua necessidade específica
               </p>
             </div>
-          </div>
+          </StaggerItem>
 
           <div className="w-px self-stretch bg-title-topic/30" />
 
-          <div className="flex flex-col flex-1 items-center gap-8">
-            <User className="text-title-topic" size={54} strokeWidth={1.5} />
+          <StaggerItem className="group flex flex-col flex-1 items-center gap-8">
+            <User
+              className={featureIconClassName}
+              size={54}
+              strokeWidth={1.5}
+            />
 
             <div className="flex flex-col items-center gap-3 *:font-satoshi *:font-medium *:text-center">
               <h3 className="text-primary text-[22px] tracking-[-0.66px] leading-[26.4px]">
-                Expert Therapists
+                Quiropraxistas Experientes
               </h3>
               <p className="text-lg text-secondary tracking-[-0.54px]">
-                Our skilled professionals provide high-quality treatments
+                Nossos profissionais são formados e oferecem tratamentos de alta
+                qualidade e resultados reais
               </p>
             </div>
-          </div>
+          </StaggerItem>
 
           <div className="w-px self-stretch bg-title-topic/30" />
 
-          <div className="flex flex-col flex-1 items-center gap-8">
-            <Gem className="text-title-topic" size={54} strokeWidth={1.5} />
+          <StaggerItem className="group flex flex-col flex-1 items-center gap-8">
+            <Gem className={featureIconClassName} size={54} strokeWidth={1.5} />
 
             <div className="flex flex-col items-center gap-3 *:font-satoshi *:font-medium *:text-center">
               <h3 className="text-primary text-[22px] tracking-[-0.66px] leading-[26.4px]">
-                Luxurious Ambience
+                Ambiente Acolhedor
               </h3>
               <p className="text-lg text-secondary tracking-[-0.54px]">
-                Indulge in a serene & calming environment that promotes
-                relaxation
+                Desfrute de um espaço tranquilo e aconchegante que favorece a
+                recuperação e o bem-estar
               </p>
             </div>
-          </div>
-        </div>
+          </StaggerItem>
+        </Stagger>
 
         <div className="flex items-center justify-center gap-12">
           <div className="flex flex-col gap-5">
-            <div className="flex items-center gap-2.5">
-              <div className="rounded-full bg-title-topic size-2.5" />
+            <Reveal x={-40} y={0} className="flex flex-col gap-5">
+              <div className="flex items-center gap-2.5">
+                <div className="rounded-full bg-title-topic size-2.5" />
 
-              <h2 className="text-lg font-medium font-satoshi text-black tracking-[-0.54px]">
-                Why choose us
-              </h2>
-            </div>
+                <h2 className="text-lg font-medium font-satoshi text-black tracking-[-0.54px]">
+                  Por que nos escolher
+                </h2>
+              </div>
 
-            <p className="text-5xl text-primary font-medium tracking-[-1.61px] leading-[54.5px]">
-              Experience the perfect blend of luxury & spa
-            </p>
+              <p className="text-5xl text-primary font-medium tracking-[-1.61px] leading-[54.5px]">
+                A combinação ideal de técnica e cuidado real
+              </p>
 
-            <span className="text-secondary font-medium font-satoshi text-lg tracking-[-0.54px] max-w-[500px]">
-              Our team of skilled professionals provides personalized,
-              non-invasive treatments to help you look and feel your best
-            </span>
+              <span className="text-secondary font-medium font-satoshi text-lg tracking-[-0.54px] max-w-[500px]">
+                Nossa equipe de especialistas oferece tratamentos personalizados
+                e não invasivos para você se sentir e viver muito melhor
+              </span>
+            </Reveal>
 
-            <div className="grid grid-cols-2 gap-3.5 pt-3">
-              {Array.from({ length: 4 }).map((_, index) => (
-                <div key={index} className="flex items-center gap-3.5">
-                  <CheckIcon className="text-title-topic" size={20} />
+            <Stagger className="grid grid-cols-2 gap-3.5 pt-3">
+              {checklist.map((item) => (
+                <StaggerItem
+                  key={item}
+                  x={-12}
+                  y={0}
+                  className="flex items-center gap-3.5"
+                >
+                  <CheckIcon className="text-title-topic shrink-0" size={20} />
 
                   <p className="text-primary text-lg font-medium font-satoshi tracking-[-0.54px]">
-                    Skilled Professionals
+                    {item}
                   </p>
-                </div>
+                </StaggerItem>
               ))}
-            </div>
+            </Stagger>
           </div>
 
-          <div className="min-h-[445px] min-w-[550px] rounded-3xl bg-title-topic" />
+          <Reveal
+            x={40}
+            y={0}
+            className="min-h-[445px] min-w-[550px] rounded-3xl bg-title-topic"
+          />
         </div>
 
-        <div className="flex justify-center gap-6 w-full px-4">
-          <div className="flex flex-col flex-1 items-center gap-8">
-            <Pipette className="text-title-topic" size={54} strokeWidth={1.5} />
+        <Stagger className="flex justify-center gap-6 w-full px-4">
+          <StaggerItem className="group flex flex-col flex-1 items-center gap-8">
+            <Leaf
+              className={featureIconClassName}
+              size={54}
+              strokeWidth={1.5}
+            />
 
             <div className="flex flex-col items-center gap-3 *:font-satoshi *:font-medium *:text-center">
               <h3 className="text-primary text-[22px] tracking-[-0.66px] leading-[26.4px]">
-                Customized Treatments
+                Técnicas Não Invasivas
               </h3>
               <p className="text-lg text-secondary tracking-[-0.54px]">
-                Every guest enjoys a tailored experience, carefully designed to
-                address
+                Tratamentos sem medicamentos ou cirurgias, respeitando o ritmo
+                natural do seu corpo
               </p>
             </div>
-          </div>
+          </StaggerItem>
 
           <div className="w-px self-stretch bg-title-topic/30" />
 
-          <div className="flex flex-col flex-1 items-center gap-8">
-            <User className="text-title-topic" size={54} strokeWidth={1.5} />
+          <StaggerItem className="group flex flex-col flex-1 items-center gap-8">
+            <BadgeCheck
+              className={featureIconClassName}
+              size={54}
+              strokeWidth={1.5}
+            />
 
             <div className="flex flex-col items-center gap-3 *:font-satoshi *:font-medium *:text-center">
               <h3 className="text-primary text-[22px] tracking-[-0.66px] leading-[26.4px]">
-                Expert Therapists
+                Resultados Comprovados
               </h3>
               <p className="text-lg text-secondary tracking-[-0.54px]">
-                Our skilled professionals provide high-quality treatments
+                Milhares de pacientes atendidos e avaliações cinco estrelas que
+                confirmam nossa qualidade
               </p>
             </div>
-          </div>
+          </StaggerItem>
 
           <div className="w-px self-stretch bg-title-topic/30" />
 
-          <div className="flex flex-col flex-1 items-center gap-8">
-            <Gem className="text-title-topic" size={54} strokeWidth={1.5} />
+          <StaggerItem className="group flex flex-col flex-1 items-center gap-8">
+            <HeartHandshake
+              className={featureIconClassName}
+              size={54}
+              strokeWidth={1.5}
+            />
 
             <div className="flex flex-col items-center gap-3 *:font-satoshi *:font-medium *:text-center">
               <h3 className="text-primary text-[22px] tracking-[-0.66px] leading-[26.4px]">
-                Luxurious Ambience
+                Atendimento Humanizado
               </h3>
               <p className="text-lg text-secondary tracking-[-0.54px]">
-                Indulge in a serene & calming environment that promotes
-                relaxation
+                Escuta atenta e cuidado real em cada sessão, do primeiro contato
+                ao acompanhamento
               </p>
             </div>
-          </div>
-        </div>
+          </StaggerItem>
+        </Stagger>
       </div>
     </section>
   );
