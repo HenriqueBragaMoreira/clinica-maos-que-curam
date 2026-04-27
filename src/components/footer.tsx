@@ -1,22 +1,23 @@
-import { Facebook, Instagram, Mail, MapPin, Phone } from "lucide-react";
+import { Facebook, Instagram, MapPin, Phone } from "lucide-react";
 import Link from "next/link";
+import { Reveal } from "@/components/motion/reveal";
 import { TiktokIcon } from "./icons/tiktok";
 
 export function Footer() {
   return (
     <footer className="flex justify-center items-center bg-white py-14 px-6">
       <div className="flex flex-1 max-w-[1150px]">
-        <div className="flex flex-col flex-1 gap-12 font-medium">
+        <Reveal className="flex flex-col flex-1 gap-12 font-medium">
           <p className="text-[28px] text-black">Quiropraxia Mãos que Curam</p>
 
           <div className="flex flex-col gap-1.5">
             <p className="text-lg text-black">Horário de funcionamento:</p>
             <p className="text-secondary">08:00 - 20:00</p>
           </div>
-        </div>
+        </Reveal>
 
         <div className="flex flex-1 justify-between">
-          <div className="flex flex-col gap-6">
+          <Reveal delay={0.1} className="flex flex-col gap-6">
             <p className="text-xl font-medium">Navegação</p>
 
             <div className="flex flex-col gap-5 *:text-secondary *:font-medium *:hover:text-black *:duration-200 *:transition">
@@ -28,9 +29,9 @@ export function Footer() {
 
               <Link href="#testimonials">Depoimentos</Link>
             </div>
-          </div>
+          </Reveal>
 
-          <div className="flex flex-col gap-6">
+          <Reveal delay={0.2} className="flex flex-col gap-6">
             <p className="text-xl font-medium">Contato</p>
 
             <div className="flex flex-col gap-5 text-secondary *:font-medium *:hover:text-black *:duration-200 *:transition">
@@ -43,15 +44,6 @@ export function Footer() {
                 />
 
                 <span>+55 (11) 91421-5301</span>
-              </Link>
-
-              <Link href="mailto:test@gmail.com" className="flex gap-2.5">
-                <Mail
-                  className="text-title-topic hover:text-title-topic"
-                  size={20}
-                />
-
-                <span>test@gmail.com</span>
               </Link>
 
               <Link
@@ -70,9 +62,9 @@ export function Footer() {
                 <span>São Paulo, SP</span>
               </Link>
             </div>
-          </div>
+          </Reveal>
 
-          <div className="flex flex-col gap-6">
+          <Reveal delay={0.3} className="flex flex-col gap-6">
             <p className="text-xl font-medium">Redes Sociais</p>
 
             <div className="flex gap-2 items-center">
@@ -110,7 +102,7 @@ export function Footer() {
                 <TiktokIcon className="size-3 group-hover:scale-110 transition" />
               </a>
             </div>
-          </div>
+          </Reveal>
         </div>
       </div>
     </footer>
