@@ -1,3 +1,4 @@
+import { Reveal } from "@/components/motion/reveal";
 import {
   Accordion,
   AccordionContent,
@@ -9,7 +10,7 @@ export function FaqSection() {
   return (
     <section id="faq" className="flex justify-center items-center py-[82px]">
       <div className="flex flex-1 gap-[54px] max-w-[1150px]">
-        <div className="flex flex-col flex-1 gap-6">
+        <Reveal x={-40} y={0} className="flex flex-col flex-1 gap-6">
           <div className="flex items-center gap-2.5">
             <div className="rounded-full bg-title-topic size-2.5" />
 
@@ -19,77 +20,78 @@ export function FaqSection() {
           </div>
 
           <span className="text-primary text-[46px] font-medium tracking-[-1.61px] leading-[54.51px] max-w-[440px]">
-            Frequently asked questions about spa
+            Perguntas frequentes sobre quiropraxia
           </span>
-        </div>
+        </Reveal>
 
-        <Accordion
-          type="single"
-          collapsible
-          defaultValue="shipping"
-          className="max-w-lg"
-        >
-          <AccordionItem value="shipping">
-            <AccordionTrigger>
-              What types of services do you offer?
-            </AccordionTrigger>
-            <AccordionContent>
-              We offer a variety of services including massages, facials, body
-              treatments, reflexology, and more. Each treatment is designed to
-              help you relax and rejuvenate
-            </AccordionContent>
-          </AccordionItem>
+        <Reveal x={40} y={0} delay={0.1} className="max-w-lg">
+          <Accordion type="single" collapsible defaultValue="shipping">
+            <AccordionItem value="shipping">
+              <AccordionTrigger>
+                Quais tipos de serviços vocês oferecem?
+              </AccordionTrigger>
+              <AccordionContent>
+                Oferecemos ajustes quiropráticos, massagens terapêuticas,
+                avaliações posturais e muito mais. Cada tratamento é
+                desenvolvido para aliviar dores e promover bem-estar real
+              </AccordionContent>
+            </AccordionItem>
 
-          <AccordionItem value="returns">
-            <AccordionTrigger>How do I book an appointment?</AccordionTrigger>
-            <AccordionContent>
-              You can easily book an appointment online through our website or
-              by calling us directly at [Phone Number]
-            </AccordionContent>
-          </AccordionItem>
+            <AccordionItem value="returns">
+              <AccordionTrigger>
+                Como faço para agendar uma consulta?
+              </AccordionTrigger>
+              <AccordionContent>
+                Você pode agendar facilmente pelo nosso site ou nos ligando
+                diretamente pelo (11) 91421-5301. O processo é rápido e simples
+              </AccordionContent>
+            </AccordionItem>
 
-          <AccordionItem value="support">
-            <AccordionTrigger>
-              What should I expect during my first visit?
-            </AccordionTrigger>
-            <AccordionContent>
-              During your first visit, you’ll be greeted by our friendly staff
-              who will guide you through the service menu and help you select
-              the best treatment for your needs
-            </AccordionContent>
-          </AccordionItem>
+            <AccordionItem value="support">
+              <AccordionTrigger>
+                O que esperar durante minha primeira consulta?
+              </AccordionTrigger>
+              <AccordionContent>
+                Na sua primeira visita, nossa equipe fará uma avaliação completa
+                da sua coluna e postura para indicar o tratamento mais adequado
+                às suas necessidades
+              </AccordionContent>
+            </AccordionItem>
 
-          <AccordionItem value="support1">
-            <AccordionTrigger>
-              Are your treatments customizable?
-            </AccordionTrigger>
-            <AccordionContent>
-              During your first visit, you’ll be greeted by our friendly staff
-              who will guide you through the service menu and help you select
-              the best treatment for your needs
-            </AccordionContent>
-          </AccordionItem>
+            <AccordionItem value="support1">
+              <AccordionTrigger>
+                Os tratamentos são personalizados?
+              </AccordionTrigger>
+              <AccordionContent>
+                Sim! Cada paciente é avaliado individualmente. Adaptamos as
+                técnicas quiropráticas de acordo com o seu histórico de saúde,
+                dores e objetivos de bem-estar
+              </AccordionContent>
+            </AccordionItem>
 
-          <AccordionItem value="support2">
-            <AccordionTrigger>Do you offer gift cards?</AccordionTrigger>
-            <AccordionContent>
-              During your first visit, you’ll be greeted by our friendly staff
-              who will guide you through the service menu and help you select
-              the best treatment for your needs
-            </AccordionContent>
-          </AccordionItem>
+            <AccordionItem value="support2">
+              <AccordionTrigger>
+                Vocês oferecem planos de tratamento?
+              </AccordionTrigger>
+              <AccordionContent>
+                Sim, temos planos de acompanhamento quiroprático com sessões
+                programadas para garantir melhores resultados ao longo do tempo
+                e de forma mais acessível
+              </AccordionContent>
+            </AccordionItem>
 
-          <AccordionItem value="support3">
-            <AccordionTrigger>
-              What is your cancellation policy?
-            </AccordionTrigger>
-            <AccordionContent>
-              During your first visit, you’ll be greeted by our friendly staff
-              who will guide you through the service menu and help you select
-              the best treatment for your needs
-            </AccordionContent>
-          </AccordionItem>
-        </Accordion>
+            <AccordionItem value="support3">
+              <AccordionTrigger>
+                Qual é a política de cancelamento?
+              </AccordionTrigger>
+              <AccordionContent>
+                Solicitamos que cancelamentos sejam feitos com pelo menos 24h de
+                antecedência. Entre em contato pelo telefone ou WhatsApp para
+                remarcar sua consulta sem nenhum custo adicional
+              </AccordionContent>
+            </AccordionItem>
+          </Accordion>
+        </Reveal>
       </div>
     </section>
   );
