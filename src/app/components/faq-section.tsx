@@ -8,10 +8,13 @@ import {
 
 export function FaqSection() {
   return (
-    <section id="faq" className="flex justify-center items-center py-[82px]">
-      <div className="flex flex-1 gap-[54px] max-w-[1150px]">
+    <section
+      id="faq"
+      className="flex justify-center items-center py-16 lg:py-[82px]"
+    >
+      <div className="flex flex-col lg:flex-row flex-1 gap-10 lg:gap-[54px] max-w-[1190px] px-5">
         <Reveal x={-40} y={0} className="flex flex-col flex-1 gap-6">
-          <div className="flex items-center gap-2.5">
+          <div className="flex items-center justify-center lg:justify-start gap-2.5">
             <div className="rounded-full bg-title-topic size-2.5" />
 
             <h2 className="text-lg font-medium font-satoshi text-black tracking-[-0.54px]">
@@ -19,12 +22,12 @@ export function FaqSection() {
             </h2>
           </div>
 
-          <span className="text-primary text-[46px] font-medium tracking-[-1.61px] leading-[54.51px] max-w-[440px]">
+          <span className="text-primary text-3xl lg:text-[46px] font-medium tracking-[-1.61px] leading-tight lg:leading-[54.51px] max-w-[440px] text-center lg:text-left mx-auto lg:mx-0">
             Perguntas frequentes sobre quiropraxia
           </span>
         </Reveal>
 
-        <Reveal x={40} y={0} delay={0.1} className="max-w-lg">
+        <Reveal x={40} y={0} delay={0.1} className="w-full lg:max-w-lg">
           <Accordion type="single" collapsible defaultValue="shipping">
             <AccordionItem value="shipping">
               <AccordionTrigger>
