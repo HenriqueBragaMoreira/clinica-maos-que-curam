@@ -6,9 +6,11 @@ import { TiktokIcon } from "./icons/tiktok";
 export function Footer() {
   return (
     <footer className="flex justify-center items-center bg-white py-14 px-6">
-      <div className="flex flex-1 max-w-[1150px]">
-        <Reveal className="flex flex-col flex-1 gap-12 font-medium">
-          <p className="text-[28px] text-black">Quiropraxia Mãos que Curam</p>
+      <div className="flex flex-col lg:flex-row flex-1 gap-10 lg:gap-0 max-w-[1150px]">
+        <Reveal className="flex flex-col flex-1 gap-6 lg:gap-12 font-medium">
+          <p className="text-2xl lg:text-[28px] text-black">
+            Quiropraxia Mãos que Curam
+          </p>
 
           <div className="flex flex-col gap-1.5">
             <p className="text-lg text-black">Horário de funcionamento:</p>
@@ -16,7 +18,7 @@ export function Footer() {
           </div>
         </Reveal>
 
-        <div className="flex flex-1 justify-between">
+        <div className="flex flex-col sm:flex-row flex-1 gap-8 sm:gap-0 sm:justify-between">
           <Reveal delay={0.1} className="flex flex-col gap-6">
             <p className="text-xl font-medium">Navegação</p>
 
