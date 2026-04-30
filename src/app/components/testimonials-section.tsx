@@ -70,9 +70,9 @@ export function TestimonialsSection() {
   return (
     <section
       id="testimonials"
-      className="flex justify-center items-center py-[82px] bg-white"
+      className="flex justify-center items-center py-16 lg:py-[82px] bg-white"
     >
-      <div className="flex flex-col items-center flex-1 gap-[52px] max-w-[1150px]">
+      <div className="flex flex-col items-center flex-1 gap-10 lg:gap-[52px] max-w-[1190px] px-5">
         <Reveal className="flex flex-col gap-5">
           <div className="flex items-center justify-center gap-2.5">
             <div className="rounded-full bg-title-topic size-2.5" />
@@ -82,12 +82,12 @@ export function TestimonialsSection() {
             </h2>
           </div>
 
-          <p className="text-primary text-[46px] font-medium max-w-[550px] text-center tracking-[-1.61px] leading-[54.51px]">
+          <p className="text-primary text-3xl lg:text-[46px] font-medium max-w-[550px] text-center tracking-[-1.61px] leading-tight lg:leading-[54.51px]">
             O que nossos pacientes dizem sobre o tratamento
           </p>
         </Reveal>
 
-        <div className="flex justify-center gap-6">
+        <div className="flex flex-col lg:flex-row justify-center gap-5 lg:gap-6 w-full">
           {columns.map((group, columnIndex) => (
             <Stagger
               key={columnIndex}
