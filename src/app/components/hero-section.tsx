@@ -9,9 +9,9 @@ export function HeroSection() {
   return (
     <section
       id="hero"
-      className="flex justify-center items-center pt-[148px] pb-14"
+      className="flex justify-center items-center pt-28 lg:pt-[148px] pb-14"
     >
-      <div className="flex flex-col items-center flex-1 gap-[72px] max-w-[1150px]">
+      <div className="flex flex-col items-center flex-1 gap-12 lg:gap-[72px] max-w-[1190px] px-5">
         <div className="space-y-7 max-w-[600px]">
           <div className="flex items-start justify-center gap-3 animate-fade-up">
             <div className="flex items-center justify-center gap-0.5">
@@ -31,7 +31,7 @@ export function HeroSection() {
 
           <div className="space-y-8">
             <div className="flex flex-col gap-4 items-center animate-fade-up [animation-delay:150ms]">
-              <h1 className="text-[56px]/16.5 tracking-[-1.96px] text-center font-medium">
+              <h1 className="text-[34px]/10 sm:text-4xl lg:text-[56px]/16.5 tracking-[-1.4px] lg:tracking-[-1.96px] text-center font-medium">
                 Quiropraxia para uma vida livre de dores
               </h1>
 
@@ -54,14 +54,14 @@ export function HeroSection() {
           </div>
         </div>
 
-        <div className="w-full h-[725px] bg-title-topic rounded-3xl animate-fade-up [animation-delay:500ms]" />
+        <div className="w-full h-[360px] sm:h-[480px] lg:h-[725px] bg-title-topic rounded-3xl animate-fade-up [animation-delay:500ms]" />
 
-        <div className="flex items-center justify-around w-full animate-fade-up [animation-delay:700ms]">
+        <div className="flex flex-col gap-8 sm:flex-row sm:items-center sm:justify-around w-full animate-fade-up [animation-delay:700ms]">
           <div className="flex flex-col gap-1.5 *:font-medium text-center">
             <CountUp
               to={7000}
               prefix="+"
-              className="text-title-topic text-5xl tracking-[-1.61px]"
+              className="text-title-topic text-4xl lg:text-5xl tracking-[-1.61px]"
             />
 
             <span className="text-description-topic text-lg tracking-[-0.54px]">
@@ -73,7 +73,7 @@ export function HeroSection() {
             <CountUp
               to={9000}
               prefix="+"
-              className="text-title-topic text-5xl tracking-[-1.61px]"
+              className="text-title-topic text-4xl lg:text-5xl tracking-[-1.61px]"
             />
 
             <span className="text-description-topic text-lg tracking-[-0.54px]">
@@ -85,7 +85,7 @@ export function HeroSection() {
             <CountUp
               to={400}
               prefix="+"
-              className="text-title-topic text-5xl tracking-[-1.61px]"
+              className="text-title-topic text-4xl lg:text-5xl tracking-[-1.61px]"
             />
 
             <span className="text-description-topic text-lg tracking-[-0.54px]">
