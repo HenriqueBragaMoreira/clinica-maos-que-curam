@@ -26,28 +26,32 @@ export function AboutUsSection() {
   return (
     <section
       id="about-us"
-      className="flex justify-center items-center py-[82px]"
+      className="flex justify-center items-center py-16 lg:py-[82px]"
     >
-      <div className="flex flex-col items-center flex-1 gap-[78px] max-w-[1150px]">
+      <div className="flex flex-col items-center flex-1 gap-14 lg:gap-[78px] max-w-[1190px] px-5">
         <Reveal className="flex flex-col items-center gap-8">
           <Flower className="text-title-topic" size={58} />
 
-          <p className="text-primary text-center text-2xl font-medium tracking-[-0.60px] leading-[38px] max-w-[675px]">
+          <p className="text-primary text-center text-xl lg:text-2xl font-medium tracking-[-0.60px] leading-[32px] lg:leading-[38px] max-w-[675px]">
             Nossas manipulações e tratamentos quiropráticos visam liberar tensão
             muscular, melhorar a circulação, estimular o sistema nervoso e
             restaurar o equilíbrio natural do seu corpo
           </p>
         </Reveal>
 
-        <div className="flex items-center justify-center gap-12">
+        <div className="flex flex-col lg:flex-row items-center justify-center gap-8 lg:gap-12">
           <Reveal
             x={-40}
             y={0}
-            className="min-h-[445px] min-w-[550px] rounded-3xl bg-title-topic"
+            className="w-full min-h-[280px] lg:w-auto lg:min-h-[445px] lg:min-w-[550px] rounded-3xl bg-title-topic"
           />
 
-          <Reveal x={40} y={0} className="flex flex-col gap-5">
-            <div className="flex items-center gap-2.5">
+          <Reveal
+            x={40}
+            y={0}
+            className="flex flex-col gap-5 items-center lg:items-start text-center lg:text-left"
+          >
+            <div className="flex items-center justify-center lg:justify-start gap-2.5">
               <div className="rounded-full bg-title-topic size-2.5" />
 
               <h2 className="text-lg font-medium font-satoshi text-black tracking-[-0.54px]">
@@ -55,7 +59,7 @@ export function AboutUsSection() {
               </h2>
             </div>
 
-            <p className="text-5xl text-primary font-medium tracking-[-1.61px] leading-[54.5px]">
+            <p className="text-3xl lg:text-5xl text-primary font-medium tracking-[-1.61px] leading-tight lg:leading-[54.5px]">
               Conheça nosso compromisso com a sua saúde
             </p>
 
@@ -70,7 +74,7 @@ export function AboutUsSection() {
           </Reveal>
         </div>
 
-        <Stagger className="flex justify-center gap-6 w-full px-4">
+        <Stagger className="flex flex-col lg:flex-row justify-center gap-8 lg:gap-6 w-full px-4">
           <StaggerItem className="group flex flex-col flex-1 items-center gap-8">
             <Pipette
               className={featureIconClassName}
@@ -89,7 +93,7 @@ export function AboutUsSection() {
             </div>
           </StaggerItem>
 
-          <div className="w-px self-stretch bg-title-topic/30" />
+          <div className="h-px w-full lg:h-auto lg:w-px lg:self-stretch bg-title-topic/30" />
 
           <StaggerItem className="group flex flex-col flex-1 items-center gap-8">
             <User
@@ -109,7 +113,7 @@ export function AboutUsSection() {
             </div>
           </StaggerItem>
 
-          <div className="w-px self-stretch bg-title-topic/30" />
+          <div className="h-px w-full lg:h-auto lg:w-px lg:self-stretch bg-title-topic/30" />
 
           <StaggerItem className="group flex flex-col flex-1 items-center gap-8">
             <Gem className={featureIconClassName} size={54} strokeWidth={1.5} />
@@ -126,9 +130,13 @@ export function AboutUsSection() {
           </StaggerItem>
         </Stagger>
 
-        <div className="flex items-center justify-center gap-12">
+        <div className="flex flex-col lg:flex-row items-center justify-center gap-8 lg:gap-12">
           <div className="flex flex-col gap-5">
-            <Reveal x={-40} y={0} className="flex flex-col gap-5">
+            <Reveal
+              x={-40}
+              y={0}
+              className="flex flex-col gap-5 items-center lg:items-start text-center lg:text-left"
+            >
               <div className="flex items-center gap-2.5">
                 <div className="rounded-full bg-title-topic size-2.5" />
 
@@ -137,7 +145,7 @@ export function AboutUsSection() {
                 </h2>
               </div>
 
-              <p className="text-5xl text-primary font-medium tracking-[-1.61px] leading-[54.5px]">
+              <p className="text-3xl lg:text-5xl text-primary font-medium tracking-[-1.61px] leading-tight lg:leading-[54.5px]">
                 A combinação ideal de técnica e cuidado real
               </p>
 
@@ -147,7 +155,7 @@ export function AboutUsSection() {
               </span>
             </Reveal>
 
-            <Stagger className="grid grid-cols-2 gap-3.5 pt-3">
+            <Stagger className="grid grid-cols-1 sm:grid-cols-2 gap-3.5 pt-3 mx-auto lg:mx-0">
               {checklist.map((item) => (
                 <StaggerItem
                   key={item}
@@ -168,11 +176,11 @@ export function AboutUsSection() {
           <Reveal
             x={40}
             y={0}
-            className="min-h-[445px] min-w-[550px] rounded-3xl bg-title-topic"
+            className="w-full min-h-[280px] lg:w-auto lg:min-h-[445px] lg:min-w-[550px] rounded-3xl bg-title-topic"
           />
         </div>
 
-        <Stagger className="flex justify-center gap-6 w-full px-4">
+        <Stagger className="flex flex-col lg:flex-row justify-center gap-8 lg:gap-6 w-full px-4">
           <StaggerItem className="group flex flex-col flex-1 items-center gap-8">
             <Leaf
               className={featureIconClassName}
@@ -191,7 +199,7 @@ export function AboutUsSection() {
             </div>
           </StaggerItem>
 
-          <div className="w-px self-stretch bg-title-topic/30" />
+          <div className="h-px w-full lg:h-auto lg:w-px lg:self-stretch bg-title-topic/30" />
 
           <StaggerItem className="group flex flex-col flex-1 items-center gap-8">
             <BadgeCheck
@@ -211,7 +219,7 @@ export function AboutUsSection() {
             </div>
           </StaggerItem>
 
-          <div className="w-px self-stretch bg-title-topic/30" />
+          <div className="h-px w-full lg:h-auto lg:w-px lg:self-stretch bg-title-topic/30" />
 
           <StaggerItem className="group flex flex-col flex-1 items-center gap-8">
             <HeartHandshake
