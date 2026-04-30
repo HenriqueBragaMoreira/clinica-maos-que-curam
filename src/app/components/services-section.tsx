@@ -53,9 +53,9 @@ export function ServicesSection() {
   return (
     <section
       id="services"
-      className="flex justify-center items-center py-[72px]"
+      className="flex justify-center items-center py-16 lg:py-[72px]"
     >
-      <div className="flex flex-col items-center flex-1 gap-[72px] max-w-[1100px]">
+      <div className="flex flex-col items-center flex-1 gap-12 lg:gap-[72px] max-w-[1140px] px-5">
         <Reveal className="flex flex-col gap-5">
           <div className="flex items-center justify-center gap-2.5">
             <div className="rounded-full bg-title-topic size-2.5" />
@@ -65,12 +65,12 @@ export function ServicesSection() {
             </h2>
           </div>
 
-          <p className="text-primary text-5xl font-medium max-w-[550px] text-center tracking-[-1.61px] leading-[54px]">
+          <p className="text-primary text-3xl lg:text-5xl font-medium max-w-[550px] text-center tracking-[-1.61px] leading-[54px]">
             Serviços quiropráticos para sua saúde total
           </p>
         </Reveal>
 
-        <Stagger className="grid grid-cols-3 gap-5">
+        <Stagger className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
           {services.map((service) => {
             const Icon = service.icon;
 
@@ -78,7 +78,7 @@ export function ServicesSection() {
               <StaggerItem
                 key={service.title}
                 whileHover={{ y: -6 }}
-                className="flex flex-col justify-between bg-white p-7 rounded-3xl h-[325px] hover:shadow-lg transition-shadow"
+                className="flex flex-col justify-between gap-6 bg-white p-7 rounded-3xl min-h-[300px] lg:h-[325px] hover:shadow-lg transition-shadow"
               >
                 <Icon className="text-title-topic" size={54} />
 
@@ -97,7 +97,7 @@ export function ServicesSection() {
 
           <StaggerItem
             whileHover={{ scale: 1.02 }}
-            className="flex flex-col justify-between bg-title-topic p-7 rounded-3xl h-[325px]"
+            className="flex flex-col justify-between gap-6 bg-title-topic p-7 rounded-3xl min-h-[300px] lg:h-[325px]"
           >
             <Flower className="text-white" size={54} />
 
