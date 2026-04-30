@@ -48,9 +48,9 @@ export function PricingSection() {
   return (
     <section
       id="pricing"
-      className="flex justify-center items-center py-[82px]"
+      className="flex justify-center items-center py-16 lg:py-[82px]"
     >
-      <div className="flex flex-col items-center flex-1 gap-[52px] max-w-[1150px]">
+      <div className="flex flex-col items-center flex-1 gap-10 lg:gap-[52px] max-w-[1190px] px-5">
         <Reveal className="flex flex-col gap-5">
           <div className="flex items-center justify-center gap-2.5">
             <div className="rounded-full bg-title-topic size-2.5" />
@@ -60,26 +60,26 @@ export function PricingSection() {
             </h2>
           </div>
 
-          <p className="text-primary text-[46px] font-medium max-w-[550px] text-center tracking-[-1.61px] leading-[54.51px]">
+          <p className="text-primary text-3xl lg:text-[46px] font-medium max-w-[550px] text-center tracking-[-1.61px] leading-tight lg:leading-[54.51px]">
             Preços acessíveis para um cuidado quiroprático
           </p>
         </Reveal>
 
-        <div className="flex items-center justify-center gap-10 w-full">
+        <div className="flex flex-col lg:flex-row items-center justify-center gap-8 lg:gap-10 w-full">
           <Reveal
             x={-40}
             y={0}
-            className="min-w-[550px] min-h-[550px] rounded-3xl bg-title-topic"
+            className="w-full min-h-[300px] lg:w-auto lg:min-w-[550px] lg:min-h-[550px] rounded-3xl bg-title-topic"
           />
 
-          <Stagger className="flex flex-col flex-1 gap-12">
+          <Stagger className="flex flex-col w-full lg:flex-1 gap-8 lg:gap-12">
             {plans.map((plan) => (
               <StaggerItem
                 key={plan.name}
                 className="group flex flex-col gap-2"
               >
-                <div className="flex items-center gap-4">
-                  <h3 className="text-2xl text-nowrap font-medium text-primary tracking-[-0.60px]">
+                <div className="flex flex-wrap lg:flex-nowrap items-center gap-x-4 gap-y-1">
+                  <h3 className="text-xl lg:text-2xl text-nowrap font-medium text-primary tracking-[-0.60px]">
                     {plan.name}
                   </h3>
 
