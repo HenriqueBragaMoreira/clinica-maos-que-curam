@@ -30,6 +30,12 @@
       "sourceType": "github",
       "skillPath": "skills/motion/SKILL.md",
       "computedHash": "990abca205ab4019b6e48e65d7d4c8385f200bc61d1768b4ed6c78947a029159"
+    },
+    "ui-ux-pro-max": {
+      "source": "fellipeutaka/leon",
+      "sourceType": "github",
+      "skillPath": "skills/ui-ux-pro-max/SKILL.md",
+      "computedHash": "896930edd510abcf3da34a0276f21c64f85b6ad97a83d1b2201d18ed88fab660"
     }
   }
 }
