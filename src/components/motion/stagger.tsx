@@ -8,6 +8,7 @@ import {
   type Variants,
 } from "motion/react";
 import type { ReactNode } from "react";
+import { useIsDesktop } from "@/hooks/use-is-desktop";
 
 const container: Variants = {
   hidden: {},
@@ -61,9 +62,11 @@ export function StaggerItem({
   ...props
 }: StaggerItemProps) {
   const reduce = useReducedMotion();
+  const isDesktop = useIsDesktop();
+  const offsetX = isDesktop ? x : 0;
 
   const item: Variants = {
-    hidden: reduce ? { opacity: 1 } : { opacity: 0, x, y },
+    hidden: reduce ? { opacity: 1 } : { opacity: 0, x: offsetX, y },
     show: { opacity: 1, x: 0, y: 0 },
   };
 

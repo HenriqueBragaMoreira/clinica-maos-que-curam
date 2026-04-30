@@ -87,9 +87,14 @@
   --animate-slide-down: slide-down 0.6s ease-out both;
 }
 
+html {
+  overflow-x: clip;
+}
+
 body {
   background: var(--background);
   font-family: var(--font-fustat), sans-serif;
+  overflow-x: clip;
 }
 
 @media (prefers-reduced-motion: reduce) {

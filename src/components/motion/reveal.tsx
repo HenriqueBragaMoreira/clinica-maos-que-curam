@@ -2,6 +2,7 @@
 
 import { type HTMLMotionProps, motion, useReducedMotion } from "motion/react";
 import type { ReactNode } from "react";
+import { useIsDesktop } from "@/hooks/use-is-desktop";
 
 type RevealProps = {
   children?: ReactNode;
@@ -28,11 +29,13 @@ export function Reveal({
   ...props
 }: RevealProps) {
   const reduce = useReducedMotion();
+  const isDesktop = useIsDesktop();
+  const offsetX = isDesktop ? x : 0;
 
   return (
     <motion.div
       className={className}
-      initial={reduce ? false : { opacity: 0, x, y }}
+      initial={reduce ? false : { opacity: 0, x: offsetX, y }}
       whileInView={{ opacity: 1, x: 0, y: 0 }}
       viewport={{ once: true, amount: 0.2 }}
       transition={{ duration: 0.6, ease: "easeOut", delay }}
